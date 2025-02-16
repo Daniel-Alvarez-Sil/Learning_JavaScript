@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick = 'cambiarTitulo(this)'>
+        Lección 13
+    </h1>
+    <br/>    
+    <script>
+        function cambiarTitulo(objetoArg){
+            console.log("Cambiamos el texto y el color del título. ");
+            objetoArg.innerHTML = 'Lección 14';
+            objetoArg.style.color = 'yellow';
+        }
+    </script>
+</body>
+</html>

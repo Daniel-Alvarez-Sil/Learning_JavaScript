@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = 'titulo'>Imagen</h1>
+    <button onclick = "cambiarImagen()">
+        Cambiar Imagen
+    </button>
+    <img id = 'imagen' src = 'http://globalmentoring.com.mx/imagenes/javascript.png'/>    
+    <script>
+        function cambiarImagen(){
+            document.getElementById('titulo').style.color = 'orange';
+            document.getElementById('imagen').src = 'http://globalmentoring.com.mx/imagenes/html5.png';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = 'titulo' onmousedown = 'verde(this)' onmouseup = 'amarillo(this)'>
+        Manejo de los Eventos: "onmousedown", "onmouseup" y 
+    </h1>    
+    <br/>
+    <p>
+        "onmousedown"   = Evento asociado con el evento de mantener el click del ratón
+        <br/>
+        "onmouseup"     = Evento asociado con el evento de liberar el click del mouse
+        <br/>
+        "onclick"       = Evento asociado con el evento de dar un solo click    
+    </p>
+    <script>
+        function verde(objetoArg){
+            objetoArg.style.color = 'green'; 
+        }
+        function amarillo(objetoArg){
+            objetoArg.style.color = 'yellow'; 
+        }
+    </script>
+</body>
+</html>

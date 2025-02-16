@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Uso del Comando: "addEventListener"
+    </h1>
+    <br/>
+    <p>
+        El comando, addEventListener, nos permite agregar eventos a un objeto HTML.
+        <br/>
+        Este comando nos permite agregar un método asociado a un evento a un objeto. 
+        <br/>
+        Asimismo, cuando usamos este comando, el método asociado recibe automáticamente, como primer parámetro, el evento al que se asocia
+    </p>
+    <br/>
+    Nombre: <input type = 'text' id = 'nombre'>
+    <br/>
+    Apellido: <input type = 'text' id = 'apellido'>
+    <script>
+        document.getElementById('nombre').addEventListener('focus', bgGris);
+        document.getElementById('nombre').addEventListener('blur', bgNormal);
+        document.getElementById('apellido').addEventListener('focus', bgGris);
+        document.getElementById('apellido').addEventListener('blur', bgNormal);
+        function bgGris(eventoArg){
+            eventoArg.target.style.background = 'grey';
+        }
+        function bgNormal(eventoArg){
+            eventoArg.target.style.background = 'white'; 
+        }
+    </script>
+</body>
+</html>

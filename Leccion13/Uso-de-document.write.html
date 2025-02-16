@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Ejemplo del Uso de document.write()
+    </h1>
+    <p>
+        Division 1: <br/>
+    </p>
+    <button onclick = 'escribir()'>
+        Uso de document.write();
+    </button>
+    <script>
+        document.write("<br/>Saludos desde JavaScript");
+        console.log("El comando document.write() nos permite escribir sobre el documento, pero elimina todo lo demás (sobreescribe)");
+        function escribir(){
+            document.write("Adios");
+        }
+    </script>
+
+</body>
+</html>

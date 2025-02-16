@@ -1,0 +1,416 @@
+/* Cambiamos las propiedas de todos los elementos */
+* { 
+    /* Establecemos el margen y padding ambos a cero */
+    margin: 0;
+    padding: 0;
+    /* La opción boxsizing nos ayuda a decidir si queremos que el padding o border de un objeto sea añadido a sus pixeles o proporciones establecidos */
+    /* Como nuestro valor es "border-box" el padding y border de un objeto no va a aumentar o disminuir la proporcion establecida de éste */    
+    box-sizing: border-box;
+}
+
+/* Clase para limpiar los atributos que pudiera heredar un elemento */
+.limpiarEstilos::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Clase para usar en pruebas, la cual nos permite ver el borde de los elementos de la página */
+.border-pruebas{
+    border: 1px rgb(0, 0, 0) solid; 
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+    /* border: 5px rgb(0,0,0) solid; */
+}
+
+/* .derecha { float: right; } */
+.rojo { color: #FF5049 !important; }
+.rojofocus:focus { border: 1px solid #FF5049 !important; }
+
+/* Modificamos aquellos elementos que implementen la clase de 'cabecero' */
+.cabecero {
+    /* Establecemos la altura de esta sección */
+    height: 40vh;
+    /* Establecemos que la ubicación de este elemento seguirá el flujo de los elementos ya instaurados
+        Con esta configuración, los valores de top, right, bottom y top se vuelven relativos al elemento solamente*/
+    position: relative;
+    /* Establecemos la anchura de estos elementos al 100% de la capacidad de la pantalla */
+    width: 100%;
+    /* Padding de la cabecera */
+    padding-top: 30px;
+    /* padding-bottom: 100px; */
+    /* Color de los elementos de la cabecera */
+    color: #fff;
+    /* Establecemos un borde nuevo y blanco */
+    border: rgb(255, 252, 252) 10px solid;
+    border-radius: 20px; 
+    /* Establecemos tanto la imagen de fondo de este elemento, así como una transición de colores hacia la izquierda */
+    background: linear-gradient(to right, #7b4397, #dc2430);    
+}
+
+/* Modificamos los elementos que tengan la clase de "presupuesto" */
+.presupuesto {
+    /* Establecemos la anchura de este elemento */
+    width: 350px;     
+    /* Establecemos el color de letra */
+    color: #000000;
+    /* Centramos los objetos */
+    margin: 0 auto;
+    /* Establecemos la fuente del texto */
+    font-family: Arial;
+    /* Permitimos que todas las letras del objeto sean mayúsculas */
+    text-transform: uppercase;
+    /* border: 5px rgb(0,0,0) solid; */
+}
+
+/* Modificamos la clase "presupuesto_cabecero" */
+.presupuesto_cabecero{
+    /* Establecemos el color del fondo */
+    background-color: #fff;
+    /* Establecemos un borde redondo para el elemento */    
+    border-radius: 35px;
+    /* Establecemos un espacio entre el elemento y otros elementos */
+    margin-bottom: 10px;
+    /* Establecemos la alineación del texto */    
+    text-align: center;
+    /* Establecemos el padding del objeto (distancia entre el valor interior del objeto y sus paredes) */
+    padding: 15px;
+    /* border: 5px rgb(0,0,0) solid; */
+}
+
+/* Modificamos los elementos que tengan la clase de "presupuesto_titulo" */
+.presupuesto_titulo{
+    /* Establecemos el tamaño, y grosor de las letras */
+    font-size: 15px;    
+    font-weight: 700;
+    /* border: 5px rgb(0,0,0) solid; */
+}
+
+/* Modificamos los elementos que tengan la clase de "presupuesto_valor" */
+.presupuesto_valor {
+    /* Establecemos el tamaño y grosor del valor */
+    font-size: 20px;    
+    font-weight: 700;
+    /* border: 5px rgb(0,0,0) solid; */
+}
+
+/* Modificamos las clases "presupuesto_ingreso" y "presupuesto_egreso" */
+.presupuesto_ingreso,
+.presupuesto_egreso {
+    /* Establecemos el padding del objeto */
+    padding: 10px;
+    /* Establecemos bordes redondos */
+    border-radius: 35px;
+    /* border: 5px rgb(0,0,0) solid; */
+}
+
+/* Modificamos la clase "presupuesto_ingreso" */
+.presupuesto_ingreso {
+    /* Establecemos el margen inferior */
+    margin-bottom: 10px;
+    /* Establecemos el color del elemento */
+    background-color: #28B9B5;
+}
+
+/* Modificamos la clase "presupuesto_egreso" */
+.presupuesto_egreso {
+    /* Modificamos el color del objeto */
+    background-color: #FF5049;
+}
+
+/* Modificamos las clases de "presupuesto_ingreso--texto" y "presupuesto_egreso--texto" */
+.presupuesto_ingreso--texto,
+.presupuesto_egreso--texto {
+    /* Alineamos el objeto hacia la izquierda */
+    position: absolute;
+    margin-top: 5px;
+    /* Establecemos el color y tamaño de las letras */
+    font-size: 12.5px;
+    color: #fff;    
+    /* Establecemos el ancho del objeto */
+    width: 160px;
+    /* Establecemos la alineación del texto del objeto */
+    text-align: center;
+    /* border: 5px rgb(0,0,0) solid; */
+}
+
+/* Modificamos la clase 'presupuesto_x--datos' */
+.presupuesto_x--datos{
+    /* Alineamos el objeto hacia la derecha */
+    float: right;
+    width: 160px;
+    /* Alineamos el texto del objeto hacia el centro */
+    text-align: center;
+    /* border: 5px rgb(0,0,0) solid; */
+}
+
+/* Modificamos los valores totales de ingreso y egreso (sus clases) */
+.presupuesto_ingreso--valor,
+.presupuesto_egreso--valor {
+    /* Establecemos el espaciado de y el tipo de fuente de las letras */
+    /* letter-spacing: 1px; */
+    font-size: 12.5px;    
+}
+
+/* Modificamos los porcentajes de los ingresos y egresos totales */
+.presupuesto_ingreso--porcentaje,
+.presupuesto_egreso--porcentaje {    
+    /* Establecemos el tamaño de la letra */
+    font-size: 12.5px;    
+}
+
+/* Modificamos el del porcentaje total de egresos */
+.presupuesto_egreso--porcentaje {
+    /* Modificamos el fondo */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    /* Modificamos el largo del elemento */
+    width: 65px;
+    /* Centramos el objeto */
+    margin: auto;
+}
+
+/* Modificamos la clase de agregar */
+.agregar {
+    /* Añadimos espaciado interior */
+    padding: 14px;
+    /* Establecemos el tamaño y la posición*/
+    width: 90%;
+    position: relative;    
+    left: 5%;
+    /* Establecemos un borde inferior */
+    border-bottom: 1px solid #d4d4d4;
+    /* Establecemos el color de fondo */
+    background-color: #fff;
+}
+
+/* Modificamos la clase de agregrar_contenedor, cuyos elementos estarán contenidos dentro de los elementos de 'agregar' */
+.agregar_contenedor {
+    /* Establecemos el tamaño */
+    width: 100%;
+    /* Alineamos los textos */
+    text-align: center;
+    /* Modificamos los textos */
+    font-family: Arial;
+}
+
+/* Modificamos la clase de 'agregar_tipo'. Por medio de sus elementos escogemos entre agregar un ingreso o un egreso */
+.agregar_tipo {
+    /* Modificamos la anchura */
+    width: 5%;
+    /* Modificamos el borde (lo hacemos redondo) */
+    border: 3px solid #e7e7e7;
+    border-radius: 10px;
+    /* Establecemos la altura */
+    height: 44px;
+    /* Establecemos el tamaño de letra */
+    font-size: 14px;
+    /* Establecemos un margen a la derecha */
+    margin-right: 10px;
+    /* Establecemos el grosor del borde */
+    font-weight: 300;
+    /* Establecemos una modificación en los bordes */
+    transition: border 0.3s;
+}
+
+/* Modificamos las clases de 'agregar_descripcion' y 'agregar_valor'. Sus elementos son usados para ingresar la descripción y valor del movimiento */
+.agregar_descripcion,
+.agregar_valor {
+    /* Modificamos el borde y fondo de los elementos */
+    border: 3px solid #e7e7e7;
+    border-radius: 10px;
+    background-color: #fff;
+    /* Establecemos el tamaño de la letra */
+    font-size: 12.5px;
+    /* Establecemos espaciado interior, padding: <top & bottom>px <left & right>px*/
+    padding: 10px 15px;
+    /* Definimos un margen en la derecha */
+    margin-right: 10px;    
+    /* Establecemos una modificación en los border */
+    transition: border 0.3s;
+}
+
+/* Establecemos el largo de las clase previamente comentadas */
+.agregar_descripcion { width: 40%;}
+.agregar_valor { width: 8%;}
+
+/* Modificamos la clase a la cual pertence el botón para agregar */
+.agregar_btn {
+    /* El tamaño del botón */
+    font-size: 35px;
+    /* Quitamos el fondo y el borde */
+    background: none;
+    border: none;
+    /* Establecemos el color */
+    color: #1cb60e;
+    /* Permitimos que el ícono del cursor cambie cuando pasemos sobre el objeto */
+    cursor: pointer;
+    /* Alineamos el objeto */
+    vertical-align: middle;
+    /* Establecemos margenes para el objeto */
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+/* Establecemos una animación para el botón de agregar */
+.agregar_btn:active { transform: translateY(2px); }
+
+/* Establecemos una acción para las etiquetas de entrada */
+/* Dicha acción permite saber si estás posicionado sobre un campo */
+.agregar_tipo:focus,
+.agregar_descripcion:focus,
+.agregar_valor:focus {
+    outline: none;
+    border: 5px solid #1cb60e;
+}
+
+/* .agregar_btn:focus { outline: none; } */
+
+/* Modificamos la clase de contenedor */
+.contenedor {
+    /* Modificamos su largo*/
+    width: 100%;
+    /* Posicionamos el objeto, margin: <top & bottom> <left & right>*/
+    margin: 30px auto; 
+    /* Modificamos el tipo de letra */
+    font-family: Arial;
+}
+
+/* Modificamos la clase de ingreso */
+.ingreso {
+    /* Posicionamos el objeto */
+    position: absolute;
+    /* Modificamos su largo */
+    width: 50%;    
+}
+
+/* Modificamos la clase de egreso */
+.egreso {
+    /* Posicionamos el objeto hacia la izquierda */
+    position: absolute;
+    left: 50%;
+    /* Modificamos su largo */
+    width: 50%;
+}
+
+/* Modificamos a los elementos 'h2' */
+h2 {
+    /* Transformamos todas las letras a mayúscula */
+    text-transform: uppercase;
+    /* Modificamos el tamaño de la letra */
+    font-size: 18px;
+    /* Hacemos más gruesa las letras */
+    font-weight: 1000;
+    /* Añadimos un margen inferior de 15px */
+    margin-bottom: 15px;
+}
+
+/* Modificamos el color de la letra y centramos los titulos, ingreso_titulo y egreso_titulo */
+.ingreso_titulo { 
+    color: #28B9B5;
+    text-align: center;
+}
+.egreso_titulo { 
+    color: #FF5049; 
+    text-align: center;
+}
+
+/* Modificamos la clase que contendrá individualmente los ingresos y egresos listados */
+.elemento {
+    /* Establecemos el espacio interior del objeto */
+    padding: 13px;
+    /* Ubicamos los elementos al centro de su contenedor */
+    position: relative;
+    width: 75%;
+    left: 12.5%;
+    /* Establecemos un borde inferior */
+    border-bottom: 10px solid #e7e7e7;
+}
+
+/* Establecemos un borde superior para el primer elemento de esta clase */
+.elemento:first-child { border-top: 10px solid #e7e7e7; }
+/* Establecemos un color distinto a todos los elementos pares */
+.elemento:nth-child(even) { background-color: #f7f7f7; }
+
+/* Posicionamos la descripción del movimiento hacia la izquierda  */
+.elemento_descripcion {
+    float: left;
+}
+
+/* Modificamos el valor del movimiento */
+.elemento_valor {
+    /* Posicionamos el elemento hacia la derecha */
+    float: right;
+    /* Establecemos una animación */
+    transition: transform 0.3s;
+}
+
+/* Modificamos la clase 'porcentaje', la cual especifica el porcentaje de un egreso en relación con los egresos totales */
+.elemento_porcentaje {
+    /* Posicionamos el objeto hacia la derecha */
+    float: right;
+    /* Establecemos un margen de 20px hacia la izquierda */
+    margin-left: 20px;
+    /* Establecemos una animación */
+    transition: transform 0.3s;
+    /* Minimizamos el tamaño de la letra */
+    font-size: 11px;
+    /* Establecemos un color de fondo */
+    background-color: #FFDAD9;
+    /* Establecemos un espaciado interior */
+    padding: 3px;
+    /* Redondeamos el borde */
+    border-radius: 3px;
+    /* Establecemos el largo del objeto */
+    width: 45px;
+    /* Alineamos el texto */
+    text-align: center;
+}
+
+/* Establecemos el color tanto de los valores de ingresos, así como del botón para eliminar ingresos */
+.ingreso .elemento_valor,
+.ingreso .elemento_eliminar--btn {
+    color: #28B9B5;
+}
+
+/* Establecemos el color del valor, porcentaje y botón de eliminar de los registros de egresos */
+.egreso .elemento_valor,
+.egreso .elemento_porcentaje,
+.egreso .elemento_eliminar--btn {
+    color: #FF5049;
+}
+
+/* Establecemos la clase de 'eliminar hacia la derecha */
+.elemento_eliminar {
+    float: right;
+}
+
+/* Modificamos la clase de 'elemento_eliminar--btn', cuyos elementos estarán contenidos dentro de los elementos de 'elemento_eliminar' */
+.elemento_eliminar--btn {
+    /* Establecemos el tamaño del botón */
+    font-size: 22px;
+    /* No establecemos fondo */
+    background: none;
+    /* No establecemos borde */
+    border: none;
+    /* Codificamos un cambio en el ícono de cursor cuando el usuario esté sobre el botón */
+    cursor: pointer;
+    /* Escondemos el botón */
+    display: none;
+}
+
+/* .elemento_eliminar--btn:focus { outline: none; } */
+/* .elemento_eliminar--btn:active { transform: translateY(2px); } */
+
+/* Habilitamos las animaciones para visualizar el botón de eliminar */
+/* El evento que denota esta habilitación es la acción de pasar el mouse por encima del objeto, hover */
+.elemento:hover .elemento_eliminar--btn { display: block; }
+.elemento:hover .elemento_valor { transform: translateX(-20px); }
+.elemento:hover .elemento_porcentaje { transform: translateX(-20px); }

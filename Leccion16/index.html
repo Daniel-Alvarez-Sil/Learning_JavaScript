@@ -1,0 +1,50 @@
+<!-- Con este HTML, crearemos una lista de personas -->
+<!-- En este proyecto, estamos usando una hoja de estilos en lugar de BootStrap -->
+<!-- La hoja de estilos está escrita en CSS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Personas</title>
+    <!-- Cargamos nuestra hoja de estilos -->
+    <link href = 'CSS/estilos.css' rel = 'stylesheet'/>
+</head>
+<body onload = 'mostrarPersonas()'>
+    <div class = 'contenedor' id = 'cabecero'>
+        <h1>
+            Listado de Personas
+        </h1>
+    </div>  
+    <div class = 'contenedor'>
+        <div class = 'elemento'>
+            <!-- Creamos una Unordered Lis (ul) -->
+            <!-- Los elementos de esta lista serán añadidos dinámicamente -->
+            <ul id = 'personas'>
+                <li>Juan Perez</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Formulario para agregar más personas a la lista -->
+    <div class="contenedor">
+        <!-- Botón para guardar la nueva persona -->
+        <div style = 'text-align: center'>
+            <button type = 'button' style = 'cursor: pointer' onclick = 'agregarPersona()'>
+                +
+            </button>
+        </div>
+        <!-- Campos para ingresar la información -->
+        <form id = 'forma'>
+            <input type = 'text' id = 'nombre' placeholder = 'Nombre'/>
+            <input type = 'text' id = 'apellido' placeholder = 'Apellido'/>
+        </form>
+    </div>
+    <!-- Cargamos el código a usar en esta aplicación -->
+    <!-- El código debe ser cargado de la siguiente manera: -->
+        <!-- Primero, aquel código que no tenga dependencia de otro código.  -->
+        <!-- Después, los códigos que sean dependientes de código ya cargado. -->
+    <script src = 'JS_Files/persona.js'></script>
+    <script src = 'JS_Files/app.js'></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Modificamos el objeto que tenga como ID a "reloj" */
+#reloj{
+    /* Establecemos el fond */
+    font-family: sans-serif;
+    /* Establecemos el tamaño de letra */
+    font-size: 60px;
+    /* Establecemos la sombre del texto */
+    /* text-shadow: 0px, 0px, 1px #000000;  */
+    /* El color de la letra */
+    color: #fff;
+}
+
+/* Modificamos los objetos que tengan como clase a "reloj-contenedor" */
+.reloj-contenedor{
+    /* Establecemos el color del fondo */
+    background-color: rgb(12, 119, 206);
+    /* Establecemos la distancia de padding */
+    padding: 25px;
+    /* Establecemos la anchura máxima del objeto */
+    max-width: 300px;
+    /* Alineamos los textos */
+    text-align: center; 
+    /* Establecemos bordes redondos */
+    border-radius: 30px; 
+    /* Establecemos el margen del objeto (espacio entre el objeto y las paredes de la pantalla) */
+    /* Reglas de la propiedad margin: 
+            margin: Xpx - X aplica para todas las direcciones
+            margin: Xpx Ypx - X aplica para norte y sur, Y aplica para izquierda y derecha
+            margin: Xpx Ypx Zpx - X aplica para el norte, Y aplica para derecha e izquierda, Z aplica para el sur
+            margin: Xpx Ypx Zpx Apx - Los margenes aplican para norte, derecha, sur e izquierda
+        Esta propiedad funge como un atajo para facilitarnos la sintáxis*/
+    margin: 10px auto;     
+}
+
+/* Modificamos los objetos que tengan como ID a "fecha" */
+#fecha{
+    /* Añadimos más espacion entre caracteres */
+    letter-spacing: 10px; 
+    /* Decrementamos el tamaño de la letra */
+    font-size: 15px; 
+}
+
+/* Modificamos aquellos objetos que implementen la clase "animar" */
+.animar{
+    /* Modificamos el borde del objeto (lo volvemos negro y grueso) */
+    border: rgb(0, 0, 0) 5px solid;
+}

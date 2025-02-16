@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form id = 'formulario'>
+        Nombre: <input type = "text" name = "nombre" value = "Juan"/>
+        <br/>
+        Apellido: <input type = "text" name = "apellido" value = "Perez"/>
+        <br/>
+    </form>
+    <button onclick = "mostrarValores()">
+        Mostrar
+    </button>
+    <div id = 'nombre'>
+
+    </div>
+    <script>
+        function mostrarValores(){
+            console.log("Recuperamos el Formulario: ");
+                let objetoFormulario = document.forms['formulario'];
+                console.log("Recuperamos los Valores del Formulario. ");
+                    let cNombre     = objetoFormulario[0].value;
+                    let cApellido   = objetoFormulario[1].value;
+                console.log("Imprimimos los Valores del Formulario, con ayuda de un Div: ");
+                    document.getElementById('nombre').innerHTML = (cNombre + '<br/>' + cApellido);
+                    
+        }
+    </script>
+</body>
+</html>

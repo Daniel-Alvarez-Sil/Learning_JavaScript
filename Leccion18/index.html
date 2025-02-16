@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la Aplicación -->
+    <title>Aplicación de Presupuesto</title>
+    <!-- Añadimos la hoja de estilos de CSS -->
+    <link href = 'CSS/estilos.css' rel = 'stylesheet'/>
+</head>
+<body onload = 'actualizarApp()'>
+    <!-- Establecemos la seccion cabecera de nuestro sitio -->
+    <div class = 'cabecero'>
+        <div class = 'presupuesto'>
+            <!-- Título de la Cabecera -->
+            <div class = 'presupuesto_cabecero'>
+                <div class = 'presupuesto_titulo'>
+                    Presupuesto Disponible
+                </div>
+                <div class = 'presupuesto_valor' id = 'iPresupuestoTotal'>
+                    +2,000.00
+                </div>
+            </div>
+            <div class = 'presupuesto_ingreso limpiarEstilos'>
+                <div class = 'presupuesto_ingreso--texto'>
+                    Ingresos
+                </div>        
+                <div class = 'presupuesto_x--datos'>
+                    <div class = 'presupuesto_ingreso--valor' id = 'iIngresoTotal'>Valor</div>
+                    <div class = 'presupuesto_ingreso--porcentaje'>100%</div>                
+                </div>        
+            </div>
+            <div class = 'presupuesto_egreso limpiarEstilos'>
+                <div class = 'presupuesto_egreso--texto'>
+                    Egresos
+                </div>         
+                <div class = 'presupuesto_x--datos'>
+                    <div class = 'presupuesto_egreso--valor' id = 'iEgresoTotal'>Valor</div>
+                    <div class = 'presupuesto_egreso--porcentaje' id = 'iPorcentajeEgresos'>%</div>                
+                </div>       
+            </div>
+        </div>
+    </div>
+    <!-- Establecemos el formulario para agregar ingresos y egresos -->
+    <form id = 'formulario'>
+        <div class = 'agregar'>
+            <div class = 'agregar_contenedor'>
+                <select class = 'agregar_tipo' id = 'boxTipo'>
+                    <option value = 'ingreso' selected> + </option>
+                    <option value = 'egreso'> - </option>
+                </select>
+                <input type = 'text' class = 'agregar_descripcion' placeholder = 'Agregar Descripción' id = 'cDescripcion'/>
+                $ <input type = 'number' class = 'agregar_valor' placeholder = 'Valor' id = 'iValor' step = 'any'/>
+                <button type = 'button' class = 'agregar_btn' onclick = 'agregarDato()'>
+                    <ion-icon name="add-circle">
+
+                    </ion-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+    <!-- Establecemos la sección de listado de ingresos y egresos -->
+    <div class = 'contenedor limpiarEstilos'>
+        <div class = 'ingreso'>
+            <h2 class = 'ingreso_titulo'>
+                Ingresos            
+            </h2>
+            <div id = 'lista-ingresos'>
+                
+            </div>
+        </div>
+        <div class = 'egreso'>
+            <h2 class = 'egreso_titulo'>
+                Egresos
+            </h2>
+            <div id = 'lista-egresos'>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Referenciamos nuestro código de JavaScript -->
+    <script src = 'JS/Dato.js'></script>
+    <script src = 'JS/Ingreso.js'></script>
+    <script src = 'JS/Egreso.js'></script>
+    <script src = 'JS/app.js'></script>
+    <!-- Implementamos los íconos de Ionicons -->    
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>        
+</body>
+</html>

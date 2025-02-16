@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Delegación de Eventos
+    </h1>
+    <br/>
+    <p>
+        Con la delegación de eventos, aplicamos a todos los objetos de un formulario los mismos eventos
+    </p>
+    <br/>
+    <form id = 'formulario'>
+        Nombre: <input type = 'text'>
+        <br/>
+        Apellido: <input type = 'text'>
+    </form>
+    <script>
+        // Conseguimos el formulario (su objeto HTML)
+        let formulario = document.getElementById('formulario'); 
+        // Añadimos el manejo de eventos a los elementos del formulario
+            formulario.addEventListener('focus', (eventoArg) => {
+                eventoArg.target.style.background = 'grey';
+            }, true /*Este último parámetro establecido permite la propagación de este evento a todos los objetos del formulario*/);
+            formulario.addEventListener('blur', (eventoArg) => {
+                eventoArg.target.style.background = '';
+            }, true);
+    </script>
+</body>
+</html>

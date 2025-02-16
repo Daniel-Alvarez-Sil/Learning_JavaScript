@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Manejo del Evento "onchanged"
+    </h1>
+    <br/>
+    <p>
+        Ingresa una palabra y presiona TAB. 
+    </p>
+    <br/>
+    Nombre: <input type = 'text' id = 'nombre' onchange = "convertir(this)">
+    <script>
+        function convertir(objetoArg){
+            objetoArg.value = objetoArg.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

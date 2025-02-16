@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Título del Documento</title>
+    <style>
+        .azul{
+            color: blue; 
+        }
+    </style>
+</head>
+<body>
+    <h1 id = 'Título' class = 'azul'>
+        Título del Cuerpo
+    </h1>
+    <p id = 'Párrafo1' class = 'azul'>
+        Párrafo 1 del Cuerpo
+    </p>
+    <p id = 'Párrafo2' class = 'azul'>
+        Párrafo 2 del Cuerpo
+    </p>
+    <script>
+        console.log("Acceso y Lectura de Objetos HTML: ");
+            let objetoTitulo = document.getElementById('Título');
+            let cTitulo = objetoTitulo.innerHTML; 
+            console.log("Objeto: " + objetoTitulo);
+            console.log("Valor del Título: " + cTitulo);
+
+            console.log("Cambiamos el Valor de un Objeto HTML... ");
+                objetoTitulo.innerHTML = "Cambio de Título"; 
+
+            let objetoParrafo = document.getElementById('Párrafo1'); 
+            let cParrafo = objetoParrafo.innerHTML; 
+            console.log("Objeto: " + objetoParrafo);
+            console.log("Valor del párrafo: " + cParrafo);        
+
+        console.log("Conseguimos un Array con Todos los Párrafos del Documento: ");
+            let arrayObjetoParrafos = document.getElementsByTagName('p');
+            console.log("# de párrafos: " + arrayObjetoParrafos.length);
+            for (objetoParrafo of arrayObjetoParrafos)
+                console.log("Párrafo: " + objetoParrafo.innerHTML);
+
+        console.log("Conseguimos un Array con Todos los Objetos del Documento que Implementen Cierta Clase: ");
+            let arrayObjetos = document.getElementsByClassName('azul');
+            console.log("Elementos que implementan la clase azul: ");
+            for (objeto of arrayObjetos)
+                console.log("Objeto: " + objeto.innerHTML); 
+        
+        console.log("Conseguimos un Array con Todos los Párrafos que Tienen el Estilo de Azul: ");
+            let arrayParrafosAzules = document.querySelectorAll('p.azul');
+            console.log("Párrafos que tengan el estilo azul: ");
+            for (parrafoAzul of arrayParrafosAzules)
+                console.log("Párrafo: " + parrafoAzul.innerHTML);
+    </script>
+</body>
+</html>

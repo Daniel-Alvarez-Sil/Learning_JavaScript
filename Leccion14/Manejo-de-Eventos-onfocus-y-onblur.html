@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Manejo de los Eventos "onfocus" y "onblur"
+    </h1>
+    <br/>
+    <p>
+        "onfocus"   :   Este evento está asociado con la selección de una caja de texto
+        <br/>
+        "onblur"    :   Este evento está asociado con la deselección de una caja de texto
+        <br/>
+    </p> 
+    <br/>
+    Nombre: <input type = 'text' onfocus = 'bgGris(this)' onblur = 'bgNormal(this)'>
+    <br/>
+    Apellido: <input type = 'text' onfocus = 'bgGris(this)' onblur = 'bgNormal(this)'>
+    <script>
+        function bgGris(objetoArg){
+            objetoArg.style.background = 'grey';
+        }
+        function bgNormal(objetoArg){
+            objetoArg.style.background = 'white'; 
+        }
+    </script>
+</body> 
+</html>

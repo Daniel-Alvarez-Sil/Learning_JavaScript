@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id = 'titulo'>
+            Lección 14
+        </h1>
+        <br/>
+        <div id = 'div'>
+
+        </div>
+        <script>
+            console.log("Asociamos un evento a un objeto HTML, pero directamente con JavaScript. ");
+            document.getElementById('titulo').onclick = cambiarTitulo;
+
+            function cambiarTitulo(){
+                document.getElementById('div').innerHTML = 'Has seleccionado el título. ';
+            }
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body onload = 'entrar()'>
+    <h1>
+        Uso del Evento "onload" y la Validación de Cookies
+    </h1>
+    <br/>
+    <div id = 'div1'>
+
+    </div>
+    <script>
+        console.log("Mandamos una alerta cuando se carga por primera vez el sistema. ");
+        console.log("Asimismo validamos si las cookies están habilitadas o no. ");
+        function entrar(){
+            alert("¡Bienvenido al sistema!");
+            let cTexto = "";
+            if (navigator.cookieEnabled)
+                cTexto = "Cookies habilitadas. ";
+            else 
+                cTexto = "Cookies inhabilitadas. ";
+            document.getElementById('div1').innerHTML = cTexto; 
+
+        }
+    </script>    
+</body>
+</html>

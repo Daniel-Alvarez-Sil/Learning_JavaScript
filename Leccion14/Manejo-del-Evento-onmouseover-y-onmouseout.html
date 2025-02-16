@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = 'titulo' onmouseover = 'rojo(this)' onmouseout = 'azul(this)'>
+        Manejo del Evento "onmouseover" y "onmouseout"
+    </h1>    
+    <br/>
+    <p>
+        Mueve el mouse en y fuera del título.
+    </p>
+    <script>
+        function rojo(objetoArg){
+            objetoArg.style.color = 'red';
+        }
+        function azul(objetoArg){
+            objetoArg.style.color = 'blue';
+        }
+    </script>
+</body>
+</html>
